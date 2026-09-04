@@ -6,8 +6,6 @@ const limparFormulario = () => {
 };
 
 const preencherFormulario = (endereco) => {
-  //Antes de preencher o formulário, limpando os campos para evitar que informações antigas permaneçam
-  limparFormulario();
   //Atribuindo as informacoes do campo de acordo com o que existe no json da API
   document.getElementById("endereco").value = endereco.logradouro;
   document.getElementById("bairro").value = endereco.bairro;
@@ -20,6 +18,8 @@ const eNumero = (numero) => /^[0-9]+$/.test(numero); //Verifica se o numero é c
 const cepValido = (cep) => cep.length === 8 && eNumero(cep); //Verifica se o CEP tem 8 dígitos e se é composto apenas por números
 
 const pesquisarCep = async () => {
+  //Antes de preencher o formulário, limpando os campos para evitar que informações antigas permaneçam
+  limparFormulario();
   const cep = document.getElementById("cep").value.replace(/\D/g, ""); // Remove qualquer caractere que não seja número
   const url = `https://viacep.com.br/ws/${cep}/json/`;
 
