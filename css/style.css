@@ -1,3 +1,31 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+}
+
+.container {
+  border: 1px solid #000;
+  padding: 20px;
+  width: 700px;
+}
+
+.container-campos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: 1px solid #ccc; /* Espessura, estilo e cor */
+  border-radius: 8px; /* Arredonda os cantos */
+  padding: 10px;
+}
+
 button {
-    background-color: yellow;
+  background-color: yellow;
 }
